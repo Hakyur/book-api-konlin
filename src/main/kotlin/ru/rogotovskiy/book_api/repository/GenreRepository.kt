@@ -6,4 +6,5 @@ import ru.rogotovskiy.book_api.entity.Genre
 
 @Repository
 interface GenreRepository : JpaRepository<Genre, Long> {
+    fun existsByName(name: String): Boolean
 }
